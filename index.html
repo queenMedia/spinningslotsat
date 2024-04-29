@@ -14,6 +14,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="./main.js" defer></script>
+  <script src="./swiper.js" defer></script>
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -41,7 +45,40 @@
           <a href="#contact">Kontakt</a>
         </li>
       </ul>
-      <button>Anmelden</button>
+      <button class="login">Anmelden</button>
+    </nav>
+    <nav class="nav-mobile">
+      <div class="nav-block">
+        <div class="logo">
+          <a href="#">
+            <img width="77" height="66" src="./assets/images/logo_icon.png" alt="logo"/>
+          </a>
+        </div>
+        <button class="menu-icon">
+          <img src="./assets/images/menu-icon.svg" alt="menu-icon"/>
+        </button>
+        <button class="close-icon">
+          <img src="./assets/images/close_icon.svg" alt="close-icon"/>
+        </button>
+      </div>
+      <ul class="mob-links">
+        <li>
+          <a href="#">Startseite</a>
+        </li>
+        <li>
+          <a href="#about">Uber</a>
+        </li>
+        <li>
+          <a href="#testimonials">Testimonials</a>
+        </li>
+        <li>
+          <a href="#categories">Kategorien</a>
+        </li>
+        <li>
+          <a href="#contact">Kontakt</a>
+        </li>
+        <button class="login">Anmelden</button>
+      </ul>
     </nav>
   </header>
   <main>
@@ -250,6 +287,110 @@
           </div>
         </div>
       </div>
+      <!-- gallery swiper -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="item">
+              <img class="hotel" src="./assets/images/hotel1.jpg" alt="hotel">
+              <div class="group">
+                <h4>Hôtel Barrière Lille</h4>
+                <div class="rate">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star-half.png" alt="star">
+                </div>
+              </div>
+              <p>
+                Das Hôtel Barrière Lille liegt in der Nähe des Konzertsaals L'Aeronef und des Henri-Matisse-Parks und bietet ein Casino, eine Terrasse und einen Wäsche- und Reinigungsservice.
+              </p>
+              <div class="icons">
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon1.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon2.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon3.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon4.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img class="hotel" src="./assets/images/hotel2.jpg" alt="hotel">
+              <div class="group">
+                <h4>Golden Tulip Aix Les Bains</h4>
+                <div class="rate">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                </div>
+              </div>
+              <p>
+                Das Hôtel Barrière Le Gray d'Albion liegt nur wenige Gehminuten vom Palais des Festivals et des Congrès und dem Hafen von Cannes entfernt und bietet 18-Loch-Golfplätze, ein Casino und eine Strandbar.
+              </p>
+              <div class="icons">
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon1.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon2.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon3.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon4.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img class="hotel" src="./assets/images/hotel3.jpg" alt="hotel">
+              <div class="group">
+                <h4>Villa Mercede</h4>
+                <div class="rate">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star.png" alt="star">
+                  <img src="./assets/images/star-half.png" alt="star">
+                </div>
+              </div>
+              <p>
+                Das Hotel Barrière Le Majestic Cannes liegt in der Nähe des Palais des Festivals et des Congrès und des Hafens von Cannes und bietet ein Casino, eine Strandbar und eine Bar am Pool.
+              </p>
+              <div class="icons">
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon1.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon2.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon3.png" alt="">
+                </div>
+                <div class="icon">
+                  <img src="./assets/images/hotel_icon4.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
       <button>Kontaktieren Sie uns</button>
     </section>
     <section id="testimonials" class="customers">
@@ -284,7 +425,7 @@
   </main>
   <footer>
     <h2>Subscribe to our <br>Newsletter</h2>
-    <button id="openModalBtn">Subscribe</button>
+    <button class="openModalBtn subscribe">Subscribe</button>
     <div class="links">
       <img width="421" src="./assets/images/logo-white-full.png" alt="logo-full">
       <div class="group">
@@ -292,13 +433,13 @@
           <h5>Unternehmen</h5>
           <ul>
             <li>
-              <a href="#">Bedingungen & Konditionen</a>
+              <button class="openModalBtn">Bedingungen & Konditionen</button>
             </li>
             <li>
-              <a href="#">Datenschutzrichtlinien</a>
+              <button class="openModalBtn">Datenschutzrichtlinien</button>
             </li>
             <li>
-              <a href="#">Cookies-Politik</a>
+              <button class="openModalBtn">Cookies-Politik</button>
             </li>
           </ul>
         </nav>
@@ -324,14 +465,16 @@
     <h4>Subscribe <span>Now</span></h4>
     <form id="form">
       <label for="firstName">First Name</label>
-      <input type="text" id="firstName" name="firstName" required>
+      <input type="text" id="firstName" name="firstName">
+      <div id="firstNameError" class="error"></div>
       <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" name="lastName" required>
+      <input type="text" id="lastName" name="lastName">
+      <div id="lastNameError" class="error"></div>
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email">
+      <div id="emailError" class="error"></div>
       <button type="submit">Subscribe</button>
     </form>
   </div>
 </body>
-<script src="./main.js"></script>
 </html>

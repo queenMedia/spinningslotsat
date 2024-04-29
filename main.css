@@ -26,10 +26,7 @@ body {
   --item-border-color: #DDDDDD;
   --button-color: #FAFAFA;
   --border-input: #C5C5C5;
-}
-
-body .modal-open {
-
+  --error-color: #BA0707;
 }
 
 .modal-overlay {
@@ -69,7 +66,6 @@ button {
 }
 
 .header {
-  padding: 14px 0;
   background-color: #fff;
   box-shadow: 0 4px 4px 2px #00000040;
 }
@@ -80,6 +76,7 @@ button {
   justify-content: center;
   text-align: left;
   color: var(--nav-color);
+  padding: 14px 0;
 }
 
 .nav .logo a img {
@@ -97,9 +94,8 @@ button {
   line-height: 23px;
 }
 
-.nav button {
+.nav .login, .nav-mobile .login {
   padding: 18px 14px;
-  margin-left: 23px;
   background-color: var(--standard-white);
   border-radius: 10px;
   box-shadow:
@@ -111,8 +107,56 @@ button {
     0 100px 80px 0 rgba(56, 56, 56, 0.1);
 }
 
+.nav .login {
+  margin-left: 23px;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.nav-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px 50px;
+}
+
+.nav-block .logo img {
+  height: 58px;
+  width: 100%;
+}
+
+.nav-block .close-icon {
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+.nav-mobile .mob-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  height: 100vh;
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+
+  /*.nav-mobile .mob-links {*/
+  /*  display: flex;*/
+  /*}*/
+}
+
 @media (max-width: 2559px) {
-  .header {
+  .nav {
     padding: 10px 0;
   }
 
@@ -120,7 +164,9 @@ button {
     gap: 20px;
   }
 
-  .nav ul li a, .nav button {
+  .nav ul li a, .nav button,
+  .nav-mobile ul li a,
+  .nav-mobile button {
     font-size: 14px;
     line-height: 18px;
   }
@@ -354,6 +400,12 @@ section.about .rectangles button .circle:after {
   }
 }
 
+@media (max-width: 767px) {
+  section.about .rectangles {
+    flex-direction: column;
+  }
+}
+
 section.best {
   display: flex;
   flex-direction: column;
@@ -444,6 +496,18 @@ section.best .group div .info span {
   section.best .group div .info span {
     font-size: 12px;
     line-height: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.best .group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section.best .group div.item {
+    width: 393px;
+    height: 105px;
   }
 }
 
@@ -539,9 +603,8 @@ section.top button, section.gallery button {
     margin-bottom: 60px;
   }
 
-  section.top .cities .item {
-    padding: 11px 21px;
-    width: 250px;
+  section.top .cities {
+    flex-direction: column;
   }
 
   section.top .cities .item p {
@@ -556,6 +619,7 @@ section.top button, section.gallery button {
 }
 
 section.gallery {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -824,7 +888,7 @@ footer h2 {
   text-align: center;
 }
 
-footer button {
+footer .subscribe {
   font-size: 18px;
   line-height: 23px;
   text-align: center;
@@ -873,6 +937,10 @@ footer nav.links, footer nav.links ul {
   text-align: left;
 }
 
+footer nav.links ul li button {
+  color: var(--standard-white);
+}
+
 footer .contacts {
   display: flex;
   flex-direction: column;
@@ -899,7 +967,7 @@ footer span {
     line-height: 56px;
   }
 
-  footer button {
+  footer .subscribe {
     font-size: 13px;
     line-height: 18px;
     width: 210px;
@@ -920,7 +988,7 @@ footer span {
     width: 300px;
   }
 
-  footer nav.links, footer nav.links ul li a, footer .contacts a {
+  footer nav.links, footer nav.links ul li button, footer .contacts a {
     gap: 15px;
     font-size: 14px;
     line-height: 17px;
@@ -929,6 +997,53 @@ footer span {
   footer span {
     font-size: 16px;
     line-height: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  footer div.links img {
+    width: 179px;
+  }
+
+  footer span {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    gap: 30px;
+    padding: 50px 0 56px;
+  }
+
+  footer h2 {
+    font-size: 33px;
+    line-height: 46px;
+  }
+
+  footer .subscribe {
+    font-size: 18px;
+    line-height: 50px;
+    width: 190px;
+    height: 86px;
+    border-radius: 5px;
+  }
+
+  footer div.links {
+    margin-top: 20px;
+  }
+
+  footer div.links, footer .group {
+    flex-direction: column;
+  }
+
+  footer div.links img {
+    width: 261px;
+  }
+
+  footer span {
+    margin: 20px 66px 0;
   }
 }
 
@@ -974,7 +1089,8 @@ footer span {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 656px;
+  width: 100%;
+  padding: 0 62px;
 }
 
 .modal form label {
@@ -994,6 +1110,16 @@ footer span {
     0 -4px 10px 0 #00000040 inset;
 }
 
+.modal form input.error {
+  border: 2px solid var(--error-color);
+}
+
+div.error {
+  display: none;
+  color: var(--error-color);
+  text-align: right;
+}
+
 .modal button {
   display: flex;
   justify-content: center;
@@ -1007,4 +1133,40 @@ footer span {
   color: var(--standard-white);
   background-color: var(--accent-color);
   margin-bottom: 42px;
+}
+
+@media (max-width: 1439px) {
+  .modal {
+    width: 500px;
+    gap: 16px;
+  }
+
+  .modal .img {
+    width: 500px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .modal .img img {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .modal h4, .modal h4 span {
+    font-size: 20px;
+  }
+
+  .modal form {
+    padding: 0 20px;
+  }
+
+  .modal form input, .modal button {
+    height: 50px;
+  }
+
+  .modal button {
+    margin-bottom: 22px;
+  }
 }
