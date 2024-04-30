@@ -1,18 +1,20 @@
+const body = document.body;
 const openModalBtns = document.querySelectorAll('.openModalBtn');
 const closeModalBtn = document.getElementById('closeModalBtn');
+const modal = document.getElementById('modal');
+const modalOverlay = document.getElementById('modalOverlay');
+
 const openMobMenu = document.querySelector('.menu-icon');
 const closeMobMenu = document.querySelector('.close-icon');
 const menuList = document.querySelector('.mob-links');
-const modal = document.getElementById('modal');
-const modalOverlay = document.getElementById('modalOverlay');
+
 const form = document.getElementById('form');
-const firstNameError = document.getElementById('firstNameError');
-const lastNameError = document.getElementById('lastNameError');
-const emailError = document.getElementById('emailError');
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
 const email = document.getElementById('email');
-const body = document.body;
+const firstNameError = document.getElementById('firstNameError');
+const lastNameError = document.getElementById('lastNameError');
+const emailError = document.getElementById('emailError');
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

@@ -1,6 +1,6 @@
 new Swiper('.swiper', {
-  slidesPerView: 1,
   spaceBetween: 10,
+  initialSlide: 0,
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -10,4 +10,12 @@ new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints: {
+    425: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1.5,
+    }
+  }
 });

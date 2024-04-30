@@ -184,12 +184,6 @@ section.main {
   padding: 24px 210px;
 }
 
-@media (max-width: 1440px) {
-  section.main {
-    padding: 24px 100px;
-  }
-}
-
 section.main .info {
   width: 100%;
   max-width: 30%;
@@ -206,20 +200,6 @@ section.main .info h1, section.main .info h1 span {
   text-align: left;
   color: var(--accent-color);
   text-wrap: nowrap;
-}
-
-@media (min-width: 2560px) {
-  section.main .info h1, section.main .info h1 span {
-    font-size: 100px;
-    line-height: 120px;
-  }
-}
-
-@media (max-width: 1439px) {
-  section.main .info h1, section.main .info h1 span {
-    font-size: 60px;
-    line-height: 70px;
-  }
 }
 
 section.main .info h1 span {
@@ -265,7 +245,24 @@ section.main .info .btns .second span {
   color: var(--standard-black);
 }
 
+@media (min-width: 2560px) {
+  section.main .info h1, section.main .info h1 span {
+    font-size: 100px;
+    line-height: 120px;
+  }
+}
+
 @media (max-width: 1439px) {
+  section.main {
+    padding: 24px 100px;
+  }
+
+  section.main .info h1,
+  section.main .info h1 span {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
   section.main .info .logo-full {
     margin-bottom: 20px;
   }
@@ -287,6 +284,48 @@ section.main .info .btns .second span {
   section.main .info .description {
     width: 450px;
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  section.main {
+    padding: 24px 40px;
+  }
+
+  section.main .info .btns .accent span,
+  section.main .info .btns .second span {
+    right: 20px;
+    bottom: 8px;
+  }
+
+  section.main .info .btns .accent span {
+    left: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.main {
+    padding: 0 18px;
+  }
+
+  section.main .info {
+    max-width: 100%;
+  }
+
+  section.main .info h1,
+  section.main .info h1 span {
+    font-size: 47px;
+    line-height: 57px;
+  }
+
+  section.main .info .description {
+    width: 100%;
+  }
+
+  section.main .info .btns .accent span,
+  section.main .info .btns .second span {
+    right: 50px;
+    bottom: 19px;
   }
 }
 
@@ -400,9 +439,20 @@ section.about .rectangles button .circle:after {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   section.about .rectangles {
     flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  section.about .rectangles .info,
+  section.about .rectangles .info .white-overlay,
+  section.about .rectangles .img {
+    width: 410px;
+    height: 392px;
+    border-radius: 20px;
   }
 }
 
@@ -547,6 +597,7 @@ section.top h2 span::after {
 
 section.top .cities {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 20px;
   margin-bottom: 64px;
@@ -603,8 +654,8 @@ section.top button, section.gallery button {
     margin-bottom: 60px;
   }
 
-  section.top .cities {
-    flex-direction: column;
+  section.top .cities .item {
+    width: 350px;
   }
 
   section.top .cities .item p {
@@ -615,6 +666,12 @@ section.top button, section.gallery button {
   section.top button {
     padding: 0;
     width: 320px;
+  }
+}
+
+@media (max-width: 1023px) {
+  section.top .cities {
+    flex-direction: column;
   }
 }
 
@@ -657,7 +714,41 @@ section.gallery .hotels {
   margin-bottom: 130px;
 }
 
-section.gallery .hotels .item {
+.swiper {
+  width: 100%;
+  display: none;
+}
+
+.swiper-navigation {
+  display: flex;
+  margin: 60px 0 40px;
+  justify-content: center;
+  gap: 15px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--item-border-color);
+  background-color: var(--standard-white);
+}
+
+.swiper-button-next {
+  rotate: 180deg;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';
+}
+
+section.gallery .hotels .item,
+section.gallery .swiper-slide .item {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -666,44 +757,52 @@ section.gallery .hotels .item {
   border-radius: 10px;
 }
 
-section.gallery .hotels .item img.hotel {
+section.gallery .hotels .item img.hotel,
+section.gallery .swiper-slide .item img.hotel {
   height: 317px;
 }
 
-section.gallery .hotels .item .group {
+section.gallery .hotels .item .group,
+section.gallery .swiper-slide .item .group {
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
 }
 
-section.gallery .hotels .item .group h4 {
+section.gallery .hotels .item .group h4,
+section.gallery .swiper-slide .item .group h4 {
   font-size: 18px;
   line-height: 18px;
   text-align: left;
 }
 
-section.gallery .hotels .item .group .rate {
+section.gallery .hotels .item .group .rate,
+section.gallery .swiper-slide .item .group .rate {
   display: flex;
 }
 
-section.gallery .hotels .item .group .rate img {
+section.gallery .hotels .item .group .rate img,
+section.gallery .swiper-slide .item .group .rate img {
   height: 11px;
 }
 
-section.gallery .hotels .item p {
+section.gallery .hotels .item p,
+section.gallery .swiper-slide .item p {
   line-height: 18px;
   text-align: left;
   color: var(--subtitle-color);
   padding: 0 10px;
 }
 
-section.gallery .hotels .item .icons {
+section.gallery .hotels .item .icons,
+section.gallery .swiper-slide .item .icons {
   display: flex;
   gap: 24px;
   padding: 0 10px;
 }
 
-section.gallery .hotels .item .icons .icon {
+section.gallery .hotels .item .icons .icon,
+section.gallery .swiper-slide .item .icons .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -713,7 +812,8 @@ section.gallery .hotels .item .icons .icon {
   box-shadow: 0 0 4px 0 #0000001A inset;
 }
 
-section.gallery .hotels .item .icons .icon img {
+section.gallery .hotels .item .icons .icon img,
+section.gallery .swiper-slide .item .icons .icon img {
   width: 20px;
   height: 20px;
   border-radius: 10px;
@@ -754,6 +854,16 @@ section.gallery button {
 
   section.gallery .hotels .item p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1023px) {
+  section.gallery .hotels {
+    display: none;
+  }
+
+  .swiper {
+    display: block;
   }
 }
 
@@ -816,6 +926,7 @@ section.customers .testimonials .item {
   background: url("./assets/images/Rectangle 4.jpg");
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 #000000BF;
+  margin: 0 auto;
 }
 
 section.customers .testimonials .item h3 {
@@ -867,6 +978,31 @@ section.customers .testimonials .item p {
 
   section.customers .testimonials .item p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1023px) {
+  section.customers h2 {
+    margin-bottom: 78px;
+  }
+
+  section.customers .testimonials {
+    display: none;
+  }
+
+  section.customers h2 span::after {
+    width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.customers h2 {
+    width: 300px;
+    margin: 0 auto 78px;
+  }
+
+  section.customers h2 span::after {
+    width: 152px;
   }
 }
 
