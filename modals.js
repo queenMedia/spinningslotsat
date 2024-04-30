@@ -60,9 +60,30 @@ function closeModalCookies() {
 openModalCookiesBtn.addEventListener("click", openModalCookies);
 closeModalCookiesBtn.addEventListener("click", closeModalCookies);
 
+//popup of disclaimer
+const openModalDisclaimerBtn = document.getElementById("openModalDisclaimerBtn");
+const closeModalDisclaimerBtn = document.getElementById("closeModalDisclaimerBtn");
+const modalDisclaimer = document.getElementById("modal-disclaimer");
+
+function openModalDisclaimer() {
+  modalDisclaimer.style.display = "flex";
+  modalOverlay.style.display = "block";
+  body.style.overflow = "hidden";
+}
+
+function closeModalDisclaimer() {
+  modalDisclaimer.style.display = "none";
+  modalOverlay.style.display = "none";
+  body.style.overflow = "auto";
+}
+
+openModalDisclaimerBtn.addEventListener("click", openModalDisclaimer);
+closeModalDisclaimerBtn.addEventListener("click", closeModalDisclaimer);
+
 modalOverlay.addEventListener("click", function() {
   closeModalInfo()
   closeModal()
   closeModalPrivacy()
   closeModalCookies()
+  closeModalDisclaimer()
 });

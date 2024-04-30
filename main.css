@@ -945,8 +945,11 @@ section.customers .testimonials .item,
   background: url("./assets/images/Rectangle 4.jpg");
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 #000000bf;
+}
 
-  @media (min-width: 600px) {
+@media (min-width: 600px) {
+  section.customers .testimonials .item,
+  .swiper-testimonials .item {
     width: 410px;
   }
 }
