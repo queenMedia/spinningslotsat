@@ -21,9 +21,11 @@ function closeMenu() {
 
 function moveToSubscribeBtn(e) {
   e.preventDefault();
+  e.stopPropagation();
   const subscribeElement = document.getElementById("subscribe");
 
   window.location.hash = "subscribe";
+  body.style.overflow === "hidden" && closeMenu();
   subscribeElement.scrollIntoView({
     behavior: "smooth",
   });
