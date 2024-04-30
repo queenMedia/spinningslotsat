@@ -34,6 +34,7 @@ body {
   --button-color: #fafafa;
   --border-input: #c5c5c5;
   --error-color: #ba0707;
+  --modal-block-text-color: #959595;
 }
 
 .modal-overlay {
@@ -60,7 +61,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  cursor: pointer;
 }
 
 button {
@@ -939,7 +939,6 @@ section.customers .testimonials .item,
   gap: 33px;
   width: 410px;
   padding: 70px 53px 12px;
-  cursor: pointer;
   background: url("./assets/images/Rectangle 4.jpg");
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 #000000bf;
@@ -1240,6 +1239,9 @@ footer span {
 
 .modal .img {
   position: relative;
+}
+
+#modal.modal .img {
   width: 780px;
   height: 400px;
   background: url("./assets/images/modal-img.jpg");
@@ -1334,13 +1336,13 @@ div.error {
   }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 2559px) {
   .modal {
     width: 500px;
     gap: 16px;
   }
 
-  .modal .img {
+  #modal.modal .img {
     width: 500px;
     background-position: center;
     background-size: cover;
@@ -1378,12 +1380,12 @@ div.error {
     gap: 12px;
   }
 
-  .modal .img {
+  #modal.modal .img {
     width: 400px;
     height: 200px;
   }
 
-  .modal .img img {
+  #modal.modal .img img {
     width: 40px;
     height: 40px;
     top: 10px;
@@ -1400,5 +1402,71 @@ div.error {
 
   .modal form input, .modal button {
     height: 40px;
+  }
+}
+
+.modal.info {
+  flex-direction: column;
+  padding: 40px 62px;
+  height: 80%;
+  overflow: auto;
+  gap: 0;
+}
+
+.modal.info .img {
+  position: relative;
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+}
+
+.modal.info .img img {
+  height: 40px;
+  width: 40px;
+  top: -30px;
+  right: -45px;
+}
+
+.modal.info .block {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.modal.info .block:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.modal.info .block h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: var(--accent-color);
+}
+
+.modal.info .block p {
+  font-weight: 400;
+  line-height: 18px;
+  text-align: justify;
+  color: var(--modal-block-text-color);
+}
+
+.modal.info .block .divider {
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 1023px) {
+  .modal.info {
+    padding: 20px 32px;
+  }
+
+  .modal.info .img img {
+    height: 30px;
+    width: 30px;
+    top: -5px;
+    right: -15px;
   }
 }

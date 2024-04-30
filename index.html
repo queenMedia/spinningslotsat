@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <script src="./main.js" defer></script>
   <script src="./swiper.js" defer></script>
+  <script src="./modal-subscribe.js" defer></script>
+  <script src="./modals.js" defer></script>
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -122,7 +124,7 @@
                   Auf diesen Seiten finden Sie verlässliche Rankings der 10 besten Casinos in den USA und anderen Ländern. Unser Expertenteam bewertet jedes Casino sorgfältig und prüft die Bonusangebote, die sie anbieten.
                 </p>
               </div>
-              <button>
+              <button class="toSubscribe">
                 <div class="circle"></div>
               </button>
             </div>
@@ -189,7 +191,7 @@
           </p>
         </div>
       </div>
-      <button>
+      <button class="toSubscribe">
         Kontaktieren Sie uns
       </button>
     </section>
@@ -396,7 +398,7 @@
           </div>
         </div>
       </div>
-      <button>Kontaktieren Sie uns</button>
+      <button class="toSubscribe">Kontaktieren Sie uns</button>
     </section>
     <section id="testimonials" class="customers">
       <h2>What our <span>Customers</span> say</h2>
@@ -480,13 +482,13 @@
           <h5>Unternehmen</h5>
           <ul>
             <li>
-              <button class="openModalInfoBtn">Bedingungen & Konditionen</button>
+              <button id="openModalInfoBtn">Bedingungen & Konditionen</button>
             </li>
             <li>
-              <button class="openModalInfoBtn">Datenschutzrichtlinien</button>
+              <button id="openModalPrivacyBtn">Datenschutzrichtlinien</button>
             </li>
             <li>
-              <button class="openModalInfoBtn">Cookies-Politik</button>
+              <button id="openModalCookiesBtn">Cookies-Politik</button>
             </li>
           </ul>
         </nav>
@@ -527,61 +529,166 @@
     </form>
   </div>
 
-  <!-- modal info text -->
+  <!-- modal terms and conditions -->
   <div id="modalOverlay" class="modal-overlay"></div>
-  <div id="modal-info" class="modal">
-    <button><img src="./assets/images/cross-icon-orange.svg"></button>
-    <div class="block">
-      <h4>Introduction</h4>
-      <p>
-        These terms and conditions govern the use of spinningslotsat.com . By accessing this website, you agree to these terms and conditions in full. If you do not agree with these terms and conditions or any part of these, you are requested not to use this jackedslots.com .
-      </p>
+  <div id="modal-info" class="modal info">
+    <div id="closeModalInfoBtn" class="img">
+      <img src="./assets/images/cross-icon-orange.svg" alt="cross">
     </div>
     <div class="block">
-      <h4>Acceptable Use</h4>
+      <h4>Einführung</h4>
       <p>
-        The use of this website is not permitted in a way that may cause damage to the website or its accessibility, or in any way that is illegal, fraudulent, or harmful.
+        Diese Allgemeinen Geschäftsbedingungen regeln die Nutzung von spinningslotsat.com. Durch den Zugriff auf diese Website stimmen Sie diesen Allgemeinen Geschäftsbedingungen vollständig zu. Wenn Sie mit diesen Allgemeinen Geschäftsbedingungen oder einem Teil davon nicht einverstanden sind, sollten Sie diese Website nicht nutzen.
       </p>
+      <div class="divider"></div>
     </div>
     <div class="block">
-      <h4>Intellectual Property</h4>
+      <h4>Zulässige Nutzung</h4>
       <p>
-        The content of this website, including but not limited to text, graphics, logos, images, and multimedia material, is protected by copyright and other intellectual property laws. These materials may not be reproduced, distributed, transmitted, or used in any way without the prior written permission of the content owner.
+        Die Nutzung dieser Website ist nicht erlaubt, wenn sie den Website oder ihre Zugänglichkeit schädigen könnte oder auf eine illegale, betrügerische oder schädliche Weise erfolgt.
       </p>
+      <div class="divider"></div>
     </div>
     <div class="block">
-      <h4>Third-Party Links</h4>
+      <h4>Geistiges Eigentum</h4>
       <p>
-        This website may contain links to other websites that are not under our control. We have no control over the nature, content, and availability of those sites. The inclusion of any link does not necessarily imply a recommendation or endorsement of the views expressed on those sites.
+        Der Inhalt dieser Website, einschließlich, aber nicht beschränkt auf Texte, Grafiken, Logos, Bilder und multimediale Materialien, ist durch Urheberrechte und andere geistige Eigentumsrechte geschützt. Diese Materialien dürfen ohne vorherige schriftliche Genehmigung des Inhaltsinhabers nicht reproduziert, verbreitet, übertragen oder auf irgendeine Weise verwendet werden.
       </p>
+      <div class="divider"></div>
     </div>
     <div class="block">
-      <h4>Modifications to the Terms and Conditions</h4>
+      <h4>Links zu Drittanbietern</h4>
       <p>
-        We reserve the right to modify these terms and conditions at any time without prior notice. It is your responsibility to periodically review these terms and conditions to stay informed about updates.
+        Diese Website kann Links zu anderen Websites enthalten, die nicht unserer Kontrolle unterliegen. Wir haben keine Kontrolle über die Art, den Inhalt und die Verfügbarkeit dieser Websites. Die Einbeziehung eines Links impliziert nicht notwendigerweise eine Empfehlung oder Unterstützung der auf diesen Websites geäußerten Ansichten.
       </p>
+      <div class="divider"></div>
+    </div>
+    <div class="block">
+      <h4>Änderungen der Allgemeinen Geschäftsbedingungen</h4>
+      <p>
+        Wir behalten uns das Recht vor, diese Allgemeinen Geschäftsbedingungen jederzeit ohne vorherige Ankündigung zu ändern. Es liegt in Ihrer Verantwortung, diese Allgemeinen Geschäftsbedingungen regelmäßig zu überprüfen, um über Aktualisierungen informiert zu bleiben.
+      </p>
+      <div class="divider"></div>
     </div>
     <div class="block">
       <h4>Cookies</h4>
       <p>
-        We use cookies. By accessing spinningslotsat.com , you agree to the use of cookies in accordance with the Privacy Policy of spinningslotsat.com .
+        Wir verwenden Cookies. Durch den Zugriff auf spinningslotsat.com stimmen Sie der Verwendung von Cookies gemäß der Datenschutzrichtlinie von spinningslotsat.com zu.
       </p>
+      <div class="divider"></div>
     </div>
     <div class="block">
-      <h4>Applicable Law</h4>
+      <h4>Anwendbares Recht</h4>
       <p>
-        These terms and conditions are governed by the laws of Canada, and any dispute related to these terms and conditions will be subject to the exclusive jurisdiction of the courts of the same.
+        Diese Allgemeinen Geschäftsbedingungen unterliegen den Gesetzen Kanadas, und alle Streitigkeiten in Bezug auf diese Allgemeinen Geschäftsbedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte desselben.
       </p>
+      <div class="divider"></div>
     </div>
     <div class="block">
-      <h4>Contact</h4>
+      <h4>Kontakt</h4>
       <p>
-        If You Have Any Questions Or Concerns About This Privacy Notice Or How We Handle Your Personal Information, You May Contact Us As Follows:
-        <br>
-        Email: info@spinningslotsat.com
-        <br>
-        Address: Adolf-Kempken-Weg 16 741189 Mönchengladbach
+        Wenn Sie Fragen oder Bedenken zu dieser Datenschutzerklärung oder zur Verarbeitung Ihrer personenbezogenen Daten haben, können Sie uns wie folgt kontaktieren:
+        <br><br>
+        E-Mail: <a href="mailto:info@spinningslotsat.com">info@spinningslotsat.com</a>
+        <br><br>
+        Adresse: Adolf-Kempken-Weg 16 741189 Mönchengladbach
       </p>
+      <div class="divider"></div>
+    </div>
+  </div>
+
+  <!-- modal privacy policy -->
+  <div id="modalOverlay" class="modal-overlay"></div>
+  <div id="modal-privacy" class="modal info">
+    <div id="closeModalPrivacyBtn" class="img">
+      <img src="./assets/images/cross-icon-orange.svg" alt="cross">
+    </div>
+    <div class="block">
+      <h4>Datenschutzerklärung</h4>
+      <p>
+        Diese Datenschutzerklärung gilt für spinningslotsat.com und alle seine verbundenen Unternehmen und verbundenen Unternehmen (wir, uns, unser oder uns). Bei jackedslots.com verpflichten wir uns, die Privatsphäre der persönlichen Daten zu schützen, die Sie uns über unsere Website und andere elektronische Mittel zur Verfügung stellen. In dieser Mitteilung wird beschrieben, wie wir Ihre personenbezogenen Daten erfassen, verwenden und weitergeben sowie Ihre Rechte in Bezug auf diese Daten.
+      </p>
+      <div class="divider"></div>
+    </div>
+    <div class="block">
+      <h4>Informationen, die wir sammeln</h4>
+      <p>
+        Wir können die folgenden personenbezogenen Daten erfassen:
+        <br><br>
+        Kontaktinformationen: Dazu können Ihr Name, Ihre E-Mail-Adresse, Postanschrift, Telefonnummer und andere Kontaktinformationen gehören.
+        <br>
+        Browsing-Informationen: Wir erfassen Informationen darüber, wie Sie unsere Website nutzen, einschließlich Ihrer IP-Adresse, Ihres Webbrowsers, Ihres Betriebssystems, der besuchten Seiten, des Datums und der Uhrzeit des Besuchs und anderer ähnlicher Daten.
+      </p>
+      <div class="divider"></div>
+    </div>
+    <div class="block">
+      <h4>Verwendung von Informationen</h4>
+      <p>
+        Wir verwenden die erhobenen personenbezogenen Daten für folgende Zwecke:
+        <br><br>
+        Um Ihnen die von Ihnen angeforderten Produkte oder Dienstleistungen bereitzustellen.<br>
+        Um Ihr Erlebnis auf unserer Website zu verbessern und zu personalisieren.<br>
+        Um Ihnen Mitteilungen zu unseren Produkten, Dienstleistungen oder Werbeaktionen zu senden, sofern Sie Ihre Einwilligung dazu gegeben haben.<br>
+        Um unseren gesetzlichen und behördlichen Verpflichtungen nachzukommen.<br>
+      </p>
+      <div class="divider"></div>
+    </div>
+    <div class="block">
+      <h4>Informationsaustausch</h4>
+      <p>
+        Wir verkaufen, vermieten oder geben Ihre personenbezogenen Daten nicht ohne Ihre ausdrückliche Zustimmung an Dritte für deren Marketingzwecke weiter. Wir können Ihre persönlichen Daten weitergeben an:
+        <br><br>
+        Dienstleister, die uns bei der Bereitstellung unserer Produkte und Dienstleistungen unterstützen, wie z. B. Zahlungsabwickler und Versanddienstleister.
+        <br>
+        Regierungsbehörden oder andere gesetzeskonforme Parteien, sofern dies zur Einhaltung gesetzlicher Anforderungen oder rechtlicher Verfahren erforderlich ist.
+      </p>
+      <div class="divider"></div>
+    </div>
+    <div class="block">
+      <h4>Deine Rechte</h4>
+      <p>
+        Sie haben bestimmte Rechte in Bezug auf Ihre personenbezogenen Daten, einschließlich des Rechts auf Zugriff, Berichtigung, Löschung und Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten. Um diese Rechte auszuüben oder Fragen zum Umgang mit Ihren personenbezogenen Daten zu stellen, kontaktieren Sie uns bitte über die unten angegebenen Kontaktinformationen.
+      </p>
+      <div class="divider"></div>
+    </div>
+    <div class="block">
+      <h4>Änderungen dieser Datenschutzerklärung</h4>
+      <p>
+        Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu aktualisieren, um Änderungen in unseren Informationsverarbeitungspraktiken widerzuspiegeln. Wir empfehlen Ihnen, diese Mitteilung regelmäßig durchzulesen, um darüber informiert zu bleiben, wie wir Ihre Daten schützen.
+      </p>
+      <div class="divider"></div>
+    </div>
+    <div class="block">
+      <h4>Haftungsausschluss für Partner</h4>
+      <p>
+        Bitte beachten Sie, dass diese Website an Partnerprogrammen teilnimmt, darunter unter anderem Booking.com und Expedia. Das bedeutet, dass wir möglicherweise eine Provision für alle über unsere Website getätigten Buchungen erhalten. Seien Sie jedoch versichert, dass dies keinen Einfluss auf den Preis hat, den Sie für Ihre Buchung zahlen.
+        <br><br>
+        Darüber hinaus ist es wichtig zu verstehen, dass alle Buchungsprobleme oder Anfragen zu Ihrer Reservierung direkt an das Hotel gerichtet werden sollten, bei dem Sie gebucht haben. Obwohl wir bestrebt sind, genaue Informationen und ein reibungsloses Buchungserlebnis bereitzustellen, sind wir nicht für die Verwaltung oder Lösung von buchungsbezogenen Angelegenheiten verantwortlich.
+        <br>
+        Vielen Dank, dass Sie unsere Website zur Buchung Ihrer Unterkünfte nutzen. Ihre Unterstützung wird sehr geschätzt!
+        <br>
+        Kontakt: Wenn Sie Fragen oder Bedenken zu dieser Datenschutzerklärung oder unserem Umgang mit Ihren persönlichen Daten haben, können Sie uns wie folgt kontaktieren:
+        <br><br>
+        E-Mail: <a href="mailto:info@spinningslotsat.com">info@spinningslotsat.com</a>
+        <br><br>
+        Adresse: Adolf-Kempken-Weg 16 741189 Mönchengladbach
+      </p>
+      <div class="divider"></div>
+    </div>
+  </div>
+
+  <!-- modal cookies policy -->
+  <div id="modalOverlay" class="modal-overlay"></div>
+  <div id="modal-cookies" class="modal info">
+    <div id="closeModalCookiesBtn" class="img">
+      <img src="./assets/images/cross-icon-orange.svg" alt="cross">
+    </div>
+    <div class="block">
+      <h4>Haftungsausschluss</h4>
+      <p>
+        Der Inhalt dieser Website dient Informations-, Rundfunk- und Unterhaltungszwecken. Wir bemühen uns, die bereitgestellten Informationen korrekt und aktuell zu halten, können jedoch nicht für deren vollständige Richtigkeit garantieren. Die bereitgestellten Informationen sollten nicht als professionelle Beratung verstanden werden. Die Nutzung der Informationen auf dieser Website erfolgt auf eigene Gefahr des Nutzers. Wir haften nicht für Verluste, Schäden oder Verletzungen, die sich aus der Nutzung oder dem Vertrauen auf die auf dieser Website enthaltenen Informationen ergeben. Durch die Nutzung dieser Website stimmen Sie diesem Haftungsausschluss sowie den Allgemeinen Geschäftsbedingungen und der aktualisierten Datenschutzerklärung zu.
+      </p>
+      <div class="divider"></div>
     </div>
   </div>
 </body>

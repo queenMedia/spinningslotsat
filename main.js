@@ -10,29 +10,6 @@ const openMobMenu = document.querySelector(".menu-icon");
 const closeMobMenu = document.querySelector(".close-icon");
 const menuList = document.querySelector(".mob-links");
 
-const form = document.getElementById("form");
-const firstName = document.getElementById("firstName");
-const lastName = document.getElementById("lastName");
-const email = document.getElementById("email");
-const firstNameError = document.getElementById("firstNameError");
-const lastNameError = document.getElementById("lastNameError");
-const emailError = document.getElementById("emailError");
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function openModal() {
-  modal.style.display = "flex";
-  modalOverlay.style.display = "block";
-  body.style.overflow = "hidden";
-}
-
-function closeModal() {
-  modal.style.display = "none";
-  modalOverlay.style.display = "none";
-  body.style.overflow = "auto";
-  clearErrors();
-}
-
 function openMenu() {
   body.style.overflow = "hidden";
   openMobMenu.style.display = "none";
@@ -149,8 +126,7 @@ openModalBtns.forEach((button) => {
 elementsToSubscribe.forEach((item) => {
   item.addEventListener("click", moveToSubscribeBtn);
 });
-closeModalBtn.addEventListener("click", closeModal);
-modalOverlay.addEventListener("click", closeModal);
+
 openMobMenu.addEventListener("click", openMenu);
 closeMobMenu.addEventListener("click", closeMenu);
 
