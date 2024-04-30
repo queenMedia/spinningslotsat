@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', monospace;
+  font-family: "Montserrat", monospace;
   font-weight: 500;
   font-size: 16px;
 }
@@ -9,7 +9,14 @@ html {
   scroll-behavior: smooth;
 }
 
-body, h1, h2, h3, h4, h5, p, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,15 +25,15 @@ body, h1, h2, h3, h4, h5, p, ul {
 body {
   position: relative;
 
-  --accent-color: #FF7E21;
+  --accent-color: #ff7e21;
   --standard-white: #fff;
   --standard-black: #000;
   --nav-color: #313131;
   --subtitle-color: #828282;
-  --item-border-color: #DDDDDD;
-  --button-color: #FAFAFA;
-  --border-input: #C5C5C5;
-  --error-color: #BA0707;
+  --item-border-color: #dddddd;
+  --button-color: #fafafa;
+  --border-input: #c5c5c5;
+  --error-color: #ba0707;
 }
 
 .modal-overlay {
@@ -89,17 +96,18 @@ button {
   gap: 30px;
 }
 
-.nav ul li a, .nav button {
+.nav ul li a,
+.nav button {
   font-size: 18px;
   line-height: 23px;
 }
 
-.nav .login, .nav-mobile .login {
+.nav .login,
+.nav-mobile .login {
   padding: 18px 14px;
   background-color: var(--standard-white);
   border-radius: 10px;
-  box-shadow:
-    0 1.85px 3.15px 0 rgba(56, 56, 56, 0.02),
+  box-shadow: 0 1.85px 3.15px 0 rgba(56, 56, 56, 0.02),
     0 8.15px 6.52px 0 rgba(56, 56, 56, 0.04),
     0 20px 13px 0 rgba(56, 56, 56, 0.05),
     0 38.52px 25.48px 0 rgba(56, 56, 56, 0.06),
@@ -164,7 +172,8 @@ button {
     gap: 20px;
   }
 
-  .nav ul li a, .nav button,
+  .nav ul li a,
+  .nav button,
   .nav-mobile ul li a,
   .nav-mobile button {
     font-size: 14px;
@@ -193,7 +202,8 @@ section.main .info .logo-full {
   margin-bottom: 36px;
 }
 
-section.main .info h1, section.main .info h1 span {
+section.main .info h1,
+section.main .info h1 span {
   font-size: 60px;
   font-weight: 600;
   line-height: 80px;
@@ -246,7 +256,8 @@ section.main .info .btns .second span {
 }
 
 @media (min-width: 2560px) {
-  section.main .info h1, section.main .info h1 span {
+  section.main .info h1,
+  section.main .info h1 span {
     font-size: 100px;
     line-height: 120px;
   }
@@ -405,7 +416,7 @@ section.about .rectangles button .circle {
 }
 
 section.about .rectangles button .circle:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 21px;
   height: 27px;
@@ -480,7 +491,7 @@ section.best .group {
   gap: 45px;
 }
 
-section.best .group div.item{
+section.best .group div.item {
   display: flex;
   gap: 20px;
   width: 477px;
@@ -570,7 +581,8 @@ section.top {
   padding: 75px 10px;
 }
 
-section.top h2, section.top h2 span {
+section.top h2,
+section.top h2 span {
   font-size: 50px;
   font-weight: 500;
   line-height: 50px;
@@ -586,7 +598,7 @@ section.top h2 span {
 }
 
 section.top h2 span::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 280px;
   height: 4px;
@@ -629,7 +641,8 @@ section.top .cities .item p {
   color: var(--subtitle-color);
 }
 
-section.top button, section.gallery button {
+section.top button,
+section.gallery button {
   font-size: 18px;
   font-weight: 700;
   line-height: 54px;
@@ -648,7 +661,8 @@ section.top button, section.gallery button {
     padding: 50px 10px;
   }
 
-  section.top h2, section.top h2 span {
+  section.top h2,
+  section.top h2 span {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 60px;
@@ -684,7 +698,8 @@ section.gallery {
   background: url("./assets/images/hotel-bg.png") no-repeat center top;
 }
 
-section.gallery h2, section.gallery h2 span {
+section.gallery h2,
+section.gallery h2 span {
   font-size: 50px;
   font-weight: 500;
   line-height: 50px;
@@ -699,7 +714,7 @@ section.gallery h2 span {
 }
 
 section.gallery h2 span::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 167px;
   height: 4px;
@@ -726,7 +741,8 @@ section.gallery .hotels {
   gap: 15px;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   position: relative;
   left: 0;
   right: 0;
@@ -744,7 +760,7 @@ section.gallery .hotels {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: '';
+  content: "";
 }
 
 section.gallery .hotels .item,
@@ -809,7 +825,7 @@ section.gallery .swiper-slide .item .icons .icon {
   width: 30px;
   height: 30px;
   border-radius: 5px;
-  box-shadow: 0 0 4px 0 #0000001A inset;
+  box-shadow: 0 0 4px 0 #0000001a inset;
 }
 
 section.gallery .hotels .item .icons .icon img,
@@ -821,13 +837,9 @@ section.gallery .swiper-slide .item .icons .icon img {
 
 section.gallery button {
   width: 322px;
-  box-shadow:
-    0 1.85px 3.15px 0 #38383806,
-    0 8.15px 6.52px 0 #3838380A,
-    0 20px 13px 0 #3838380D,
-    0 38.52px 25.48px 0 #3838380F,
-    0 64.81px 46.85px 0 #38383813,
-    0 100px 80px 0 #3838381A;
+  box-shadow: 0 1.85px 3.15px 0 #38383806, 0 8.15px 6.52px 0 #3838380a,
+    0 20px 13px 0 #3838380d, 0 38.52px 25.48px 0 #3838380f,
+    0 64.81px 46.85px 0 #38383813, 0 100px 80px 0 #3838381a;
 }
 
 @media (max-width: 1439px) {
@@ -835,7 +847,8 @@ section.gallery button {
     padding-bottom: 30px;
   }
 
-  section.gallery h2, section.gallery h2 span {
+  section.gallery h2,
+  section.gallery h2 span {
     font-size: 40px;
     margin-bottom: 60px;
   }
@@ -873,19 +886,20 @@ section.customers {
 }
 
 section.customers::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./assets/images/customers-bg.jpg');
+  background-image: url("./assets/images/customers-bg.jpg");
   background-size: cover;
   filter: blur(5px);
   z-index: -1;
 }
 
-section.customers h2, section.customers h2 span {
+section.customers h2,
+section.customers h2 span {
   font-size: 50px;
   font-weight: 500;
   line-height: 50px;
@@ -899,7 +913,7 @@ section.customers h2 span {
 }
 
 section.customers h2 span::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 280px;
   height: 4px;
@@ -925,7 +939,7 @@ section.customers .testimonials .item {
   cursor: pointer;
   background: url("./assets/images/Rectangle 4.jpg");
   border-radius: 25px;
-  box-shadow: 0 4px 10px 0 #000000BF;
+  box-shadow: 0 4px 10px 0 #000000bf;
   margin: 0 auto;
 }
 
@@ -947,7 +961,8 @@ section.customers .testimonials .item p {
 }
 
 @media (max-width: 2559px) {
-  section.customers h2, section.customers h2 span {
+  section.customers h2,
+  section.customers h2 span {
     font-size: 40px;
     line-height: 40px;
   }
@@ -1033,13 +1048,9 @@ footer .subscribe {
   height: 59px;
   border-radius: 5px;
   background-color: var(--standard-white);
-  box-shadow:
-    0 1.85px 3.15px 0 #38383806,
-    0 8.15px 6.52px 0 #3838380A,
-    0 20px 13px 0 #3838380D,
-    0 38.52px 25.48px 0 #3838380F,
-    0 64.81px 46.85px 0 #38383813,
-    0 100px 80px 0 #3838381A;
+  box-shadow: 0 1.85px 3.15px 0 #38383806, 0 8.15px 6.52px 0 #3838380a,
+    0 20px 13px 0 #3838380d, 0 38.52px 25.48px 0 #3838380f,
+    0 64.81px 46.85px 0 #38383813, 0 100px 80px 0 #3838381a;
 }
 
 footer div.links {
@@ -1064,7 +1075,8 @@ footer .group {
   gap: 77px;
 }
 
-footer nav.links, footer nav.links ul {
+footer nav.links,
+footer nav.links ul {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -1111,7 +1123,8 @@ footer span {
     border-radius: 5px;
   }
 
-  footer div.links, footer .group {
+  footer div.links,
+  footer .group {
     gap: 40px;
   }
 
@@ -1124,7 +1137,9 @@ footer span {
     width: 300px;
   }
 
-  footer nav.links, footer nav.links ul li button, footer .contacts a {
+  footer nav.links,
+  footer nav.links ul li button,
+  footer .contacts a {
     gap: 15px;
     font-size: 14px;
     line-height: 17px;
@@ -1170,7 +1185,8 @@ footer span {
     margin-top: 20px;
   }
 
-  footer div.links, footer .group {
+  footer div.links,
+  footer .group {
     flex-direction: column;
   }
 
@@ -1210,7 +1226,8 @@ footer span {
   right: 15px;
 }
 
-.modal h4, .modal h4 span {
+.modal h4,
+.modal h4 span {
   font-size: 24px;
   font-weight: 700;
   line-height: 18px;
@@ -1241,9 +1258,7 @@ footer span {
   background-color: var(--standard-white);
   border: 1px solid var(--border-input);
   border-radius: 10px;
-  box-shadow:
-    0 4px 10px 0 #00000040 inset,
-    0 -4px 10px 0 #00000040 inset;
+  box-shadow: 0 4px 10px 0 #00000040 inset, 0 -4px 10px 0 #00000040 inset;
 }
 
 .modal form input.error {
@@ -1271,6 +1286,29 @@ div.error {
   margin-bottom: 42px;
 }
 
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(87, 129, 219, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 1439px) {
   .modal {
     width: 500px;
@@ -1290,7 +1328,8 @@ div.error {
     right: 10px;
   }
 
-  .modal h4, .modal h4 span {
+  .modal h4,
+  .modal h4 span {
     font-size: 20px;
   }
 
@@ -1298,7 +1337,8 @@ div.error {
     padding: 0 20px;
   }
 
-  .modal form input, .modal button {
+  .modal form input,
+  .modal button {
     height: 50px;
   }
 
