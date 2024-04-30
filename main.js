@@ -4,7 +4,7 @@ const closeModalBtn = document.getElementById("closeModalBtn");
 const modal = document.getElementById("modal");
 const modalOverlay = document.getElementById("modalOverlay");
 
-const elementsToSubscribe = document.querySelectorAll(".toSubscribe")
+const elementsToSubscribe = document.querySelectorAll(".toSubscribe");
 
 const openMobMenu = document.querySelector(".menu-icon");
 const closeMobMenu = document.querySelector(".close-icon");
@@ -56,9 +56,7 @@ function clearErrors() {
   email.classList.remove("error");
 }
 
-function moveToSubscribeBtn() {
-
-}
+function moveToSubscribeBtn() {}
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -124,7 +122,9 @@ form.addEventListener("submit", function (event) {
       // document.querySelector('form textarea[name="message"]').value = null;
     })
     .finally(() => {
-      closeModal();
+      setTimeout(() => {
+        closeModal();
+      }, 500);
     });
 });
 
