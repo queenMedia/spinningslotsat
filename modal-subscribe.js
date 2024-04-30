@@ -38,23 +38,23 @@ function clearErrors() {
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   clearErrors();
-  
+
   let hasErrors = false;
-  
+
   if (!firstName.value) {
     firstName.classList.add("error");
     firstNameError.style.display = "block";
     firstNameError.textContent = "Enter your name";
     hasErrors = true;
   }
-  
+
   if (!lastName.value) {
     lastName.classList.add("error");
     lastNameError.style.display = "block";
     lastNameError.textContent = "Enter your last name";
     hasErrors = true;
   }
-  
+
   if (!email.value) {
     email.classList.add("error");
     emailError.style.display = "block";
@@ -66,11 +66,11 @@ form.addEventListener("submit", function (event) {
     emailError.textContent = "Enter correct email address";
     hasErrors = true;
   }
-  
+
   if (hasErrors) {
     return;
   }
-  
+
   const btn = document.querySelector("#form button[type='submit']");
   btn.innerHTML = '<div class="loading"></div>';
   fetch(
@@ -99,7 +99,7 @@ form.addEventListener("submit", function (event) {
       // document.querySelector('form textarea[name="message"]').value = null;
     })
     .finally(() => {
-      closeModal();
+      setTimeout(() => closeModal(), 500);
     });
 });
 
