@@ -4,6 +4,8 @@ const closeModalBtn = document.getElementById("closeModalBtn");
 const modal = document.getElementById("modal");
 const modalOverlay = document.getElementById("modalOverlay");
 
+const elementsToSubscribe = document.querySelectorAll(".toSubscribe")
+
 const openMobMenu = document.querySelector(".menu-icon");
 const closeMobMenu = document.querySelector(".close-icon");
 const menuList = document.querySelector(".mob-links");
@@ -54,6 +56,10 @@ function clearErrors() {
   email.classList.remove("error");
 }
 
+function moveToSubscribeBtn() {
+
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   clearErrors();
@@ -89,10 +95,6 @@ form.addEventListener("submit", function (event) {
   if (hasErrors) {
     return;
   }
-
-  console.log("Name:", firstName.value);
-  console.log("Last name:", lastName.value);
-  console.log("Email:", email.value);
 
   const btn = document.querySelector("#form button[type='submit']");
   btn.innerHTML = '<div class="loading"></div>';
@@ -143,6 +145,9 @@ email.addEventListener("input", function () {
 
 openModalBtns.forEach((button) => {
   button.addEventListener("click", openModal);
+});
+elementsToSubscribe.forEach((item) => {
+  item.addEventListener("click", moveToSubscribeBtn);
 });
 closeModalBtn.addEventListener("click", closeModal);
 modalOverlay.addEventListener("click", closeModal);

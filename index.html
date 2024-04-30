@@ -24,7 +24,7 @@
   <header id="header" class="header">
     <nav class="nav">
       <div class="logo">
-        <a href="#">
+        <a href="#subscribe">
           <img width="77" height="66" src="./assets/images/logo_icon.png" alt="logo"/>
         </a>
       </div>
@@ -45,12 +45,12 @@
           <a href="#contact">Kontakt</a>
         </li>
       </ul>
-      <button class="login">Anmelden</button>
+      <button class="login openModalBtn">Anmelden</button>
     </nav>
     <nav class="nav-mobile">
       <div class="nav-block">
         <div class="logo">
-          <a href="#">
+          <a href="#subscribe">
             <img width="77" height="66" src="./assets/images/logo_icon.png" alt="logo"/>
           </a>
         </div>
@@ -77,7 +77,7 @@
         <li>
           <a href="#contact">Kontakt</a>
         </li>
-        <button class="login">Anmelden</button>
+        <button class="login openModalBtn">Anmelden</button>
       </ul>
     </nav>
   </header>
@@ -85,7 +85,7 @@
     <section class="main">
       <div class="info">
         <div class="logo-full">
-          <a href="#">
+          <a href="#subscribe">
             <img width="606" height="159" src="./assets/images/logo-full.png" alt="logo-full">
           </a>
         </div>
@@ -97,11 +97,11 @@
           in verschiedenen Ländern, die ein fantastisches Spielerlebnis garantieren.
         </p>
         <div class="btns">
-          <a class="accent" href="#">
+          <a class="accent" href="#subscribe">
             <img width="173" height="51" src="./assets/images/info_btn-accent.svg" alt="">
             <span>Erforschen</span>
           </a>
-          <a class="second" href="#">
+          <a class="second" href="#subscribe">
             <img width="173" height="51" src="./assets/images/info_btn-second.png" alt="">
             <span>Kontakt</span>
           </a>
@@ -426,11 +426,53 @@
           </p>
         </div>
       </div>
+      <div class="swiper-testimonials">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="item">
+              <img width="106" height="106" src="./assets/images/testimonial1.png" alt="avatar">
+              <h3>Kevin Wagner</h3>
+              <h4>Ingenieur</h4>
+              <p>
+                Wahnsinn! Ich muss zugeben, dass ich anfangs dachte, es sei ein Fehler, aber ich habe die von SpinnigSlotsAT empfohlenen Online-Slots wirklich genossen. Ich danke Ihnen sehr!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img width="106" height="106" src="./assets/images/testimonial2.png" alt="avatar">
+              <h3>Anna Schmidt</h3>
+              <h4>Lehrerin</h4>
+              <p>
+                Unglaublich! Anfangs dachte ich wirklich, es sei ein Fehler, aber nachdem ich die von SpinnigSlotsAT empfohlenen Online-Slots ausprobiert habe, bin ich wirklich beeindruckt. Vielen Dank!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <img width="106" height="106" src="./assets/images/testimonial3.png" alt="avatar">
+              <h3>Julia Müller</h3>
+              <h4>Journalistin</h4>
+              <p>
+                Einfach fantastisch! Zugegeben, ich war skeptisch, aber die Online-Slots, die mir von SpinnigSlotsAT empfohlen wurden, haben mich wirklich überzeugt. Vielen Dank dafür!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-navigation">
+          <div class="swiper-button-prev">
+            <img src="./assets/images/arrow-icon.png" alt="arrow">
+          </div>
+          <div class="swiper-button-next">
+            <img src="./assets/images/arrow-icon.png" alt="arrow">
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
     <h2>Subscribe to our <br>Newsletter</h2>
-    <button class="openModalBtn subscribe">Subscribe</button>
+    <button class="openModalBtn subscribe" id="subscribe">Subscribe</button>
     <div class="links">
       <img width="421" src="./assets/images/logo-white-full.png" alt="logo-full">
       <div class="group">
@@ -438,30 +480,33 @@
           <h5>Unternehmen</h5>
           <ul>
             <li>
-              <button class="openModalBtn">Bedingungen & Konditionen</button>
+              <button class="openModalInfoBtn">Bedingungen & Konditionen</button>
             </li>
             <li>
-              <button class="openModalBtn">Datenschutzrichtlinien</button>
+              <button class="openModalInfoBtn">Datenschutzrichtlinien</button>
             </li>
             <li>
-              <button class="openModalBtn">Cookies-Politik</button>
+              <button class="openModalInfoBtn">Cookies-Politik</button>
             </li>
           </ul>
         </nav>
         <div id="contact" class="contacts">
           <h5>Kontakt aufnehmen</h5>
-          <a href="#">
+          <a
+            href="https://www.google.com/maps/place/Adolf-Kempken-Weg+16,+41189+M%C3%B6nchengladbach,+Germany/@51.1355075,6.4004249,17z/data=!3m1!4b1!4m9!1m2!2m1!1sAdolf-Kempken-Weg+16+741189+M%C3%B6nchengladbach!3m5!1s0x47bf54841b4b3f75:0x312e5aba11145bf3!8m2!3d51.1355042!4d6.4052958!15sCixBZG9sZi1LZW1wa2VuLVdlZyAxNiA3NDExODkgTcO2bmNoZW5nbGFkYmFjaJIBEGdlb2NvZGVkX2FkZHJlc3PgAQA?hl=en&entry=ttu"
+            target="_blank"
+          >
             Adolf-Kempken-Weg 16<br>
             741189 Mönchengladbach
           </a>
-          <a href="#">info@exclusivecasinonight.com</a>
+          <a href="mailto:info@spinningslotsat.com">info@spinningslotsat.com</a>
         </div>
       </div>
     </div>
-    <span>© 2024 exclusivecasinonight.com Alle Rechte vorbehalten</span>
+    <span>© 2024 spinningslotsat.com Alle Rechte vorbehalten</span>
   </footer>
   
-  <!-- modal -->
+  <!-- modal subscribe form -->
   <div id="modalOverlay" class="modal-overlay"></div>
   <div id="modal" class="modal">
     <div class="img">
@@ -480,6 +525,64 @@
       <div id="emailError" class="error"></div>
       <button type="submit">Subscribe</button>
     </form>
+  </div>
+
+  <!-- modal info text -->
+  <div id="modalOverlay" class="modal-overlay"></div>
+  <div id="modal-info" class="modal">
+    <button><img src="./assets/images/cross-icon-orange.svg"></button>
+    <div class="block">
+      <h4>Introduction</h4>
+      <p>
+        These terms and conditions govern the use of spinningslotsat.com . By accessing this website, you agree to these terms and conditions in full. If you do not agree with these terms and conditions or any part of these, you are requested not to use this jackedslots.com .
+      </p>
+    </div>
+    <div class="block">
+      <h4>Acceptable Use</h4>
+      <p>
+        The use of this website is not permitted in a way that may cause damage to the website or its accessibility, or in any way that is illegal, fraudulent, or harmful.
+      </p>
+    </div>
+    <div class="block">
+      <h4>Intellectual Property</h4>
+      <p>
+        The content of this website, including but not limited to text, graphics, logos, images, and multimedia material, is protected by copyright and other intellectual property laws. These materials may not be reproduced, distributed, transmitted, or used in any way without the prior written permission of the content owner.
+      </p>
+    </div>
+    <div class="block">
+      <h4>Third-Party Links</h4>
+      <p>
+        This website may contain links to other websites that are not under our control. We have no control over the nature, content, and availability of those sites. The inclusion of any link does not necessarily imply a recommendation or endorsement of the views expressed on those sites.
+      </p>
+    </div>
+    <div class="block">
+      <h4>Modifications to the Terms and Conditions</h4>
+      <p>
+        We reserve the right to modify these terms and conditions at any time without prior notice. It is your responsibility to periodically review these terms and conditions to stay informed about updates.
+      </p>
+    </div>
+    <div class="block">
+      <h4>Cookies</h4>
+      <p>
+        We use cookies. By accessing spinningslotsat.com , you agree to the use of cookies in accordance with the Privacy Policy of spinningslotsat.com .
+      </p>
+    </div>
+    <div class="block">
+      <h4>Applicable Law</h4>
+      <p>
+        These terms and conditions are governed by the laws of Canada, and any dispute related to these terms and conditions will be subject to the exclusive jurisdiction of the courts of the same.
+      </p>
+    </div>
+    <div class="block">
+      <h4>Contact</h4>
+      <p>
+        If You Have Any Questions Or Concerns About This Privacy Notice Or How We Handle Your Personal Information, You May Contact Us As Follows:
+        <br>
+        Email: info@spinningslotsat.com
+        <br>
+        Address: Adolf-Kempken-Weg 16 741189 Mönchengladbach
+      </p>
+    </div>
   </div>
 </body>
 </html>

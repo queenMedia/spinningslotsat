@@ -157,10 +157,6 @@ button {
   .nav-mobile {
     display: block;
   }
-
-  /*.nav-mobile .mob-links {*/
-  /*  display: flex;*/
-  /*}*/
 }
 
 @media (max-width: 2559px) {
@@ -729,7 +725,7 @@ section.gallery .hotels {
   margin-bottom: 130px;
 }
 
-.swiper {
+.swiper, .swiper-testimonials {
   width: 100%;
   display: none;
 }
@@ -842,6 +838,12 @@ section.gallery button {
     0 64.81px 46.85px 0 #38383813, 0 100px 80px 0 #3838381a;
 }
 
+@media (min-width: 1440px) {
+  section.gallery .hotels .item {
+    width: 370px;
+  }
+}
+
 @media (max-width: 1439px) {
   section.gallery {
     padding-bottom: 30px;
@@ -875,7 +877,7 @@ section.gallery button {
     display: none;
   }
 
-  .swiper {
+  .swiper, .swiper-testimonials {
     display: block;
   }
 }
@@ -929,7 +931,8 @@ section.customers .testimonials {
   padding: 80px 10px 223px;
 }
 
-section.customers .testimonials .item {
+section.customers .testimonials .item,
+.swiper-testimonials .item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -940,22 +943,32 @@ section.customers .testimonials .item {
   background: url("./assets/images/Rectangle 4.jpg");
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 #000000bf;
+}
+
+.swiper-testimonials .item {
   margin: 0 auto;
 }
 
-section.customers .testimonials .item h3 {
+.swiper-testimonials .swiper-wrapper {
+  height: 550px;
+}
+
+section.customers .testimonials .item h3,
+.swiper-testimonials .item h3 {
   font-size: 30px;
   font-weight: 500;
   line-height: 38px;
 }
 
-section.customers .testimonials .item h4 {
+section.customers .testimonials .item h4,
+.swiper-testimonials .item h4 {
   font-size: 20px;
   font-weight: 500;
   line-height: 25px;
 }
 
-section.customers .testimonials .item p {
+section.customers .testimonials .item p,
+.swiper-testimonials .item p {
   line-height: 27px;
   text-align: center;
 }
@@ -1003,6 +1016,18 @@ section.customers .testimonials .item p {
 
   section.customers .testimonials {
     display: none;
+  }
+
+  .swiper-testimonials .item {
+    height: 520px;
+  }
+
+  section.customers .swiper-testimonials .swiper-button-prev {
+    display: none;
+  }
+
+  section.customers .swiper-testimonials .swiper-button-next {
+    width: 60px;
   }
 
   section.customers h2 span::after {
@@ -1344,5 +1369,36 @@ div.error {
 
   .modal button {
     margin-bottom: 22px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .modal {
+    width: 400px;
+    gap: 12px;
+  }
+
+  .modal .img {
+    width: 400px;
+    height: 200px;
+  }
+
+  .modal .img img {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .modal form {
+    gap: 10px;
+  }
+
+  .modal form label, .modal form input {
+    font-size: 14px;
+  }
+
+  .modal form input, .modal button {
+    height: 40px;
   }
 }
