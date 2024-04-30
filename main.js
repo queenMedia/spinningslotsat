@@ -19,7 +19,8 @@ function closeMenu() {
   menuList.style.display = "none";
 }
 
-function moveToSubscribeBtn() {
+function moveToSubscribeBtn(e) {
+  e.preventDefault();
   const subscribeElement = document.getElementById("subscribe");
 
   window.location.hash = "subscribe";

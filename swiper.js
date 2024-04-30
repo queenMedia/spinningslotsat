@@ -1,13 +1,13 @@
-new Swiper('.swiper', {
+new Swiper(".swiper", {
   spaceBetween: 10,
   initialSlide: 0,
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: true,
   },
   breakpoints: {
@@ -16,21 +16,21 @@ new Swiper('.swiper', {
     },
     768: {
       slidesPerView: 1.5,
-    }
-  }
+    },
+  },
 });
 
-new Swiper('.swiper-testimonials', {
+new Swiper(".swiper-testimonials", {
   initialSlide: 0,
-  direction: 'vertical',
+  //direction: 'vertical',
   slidesPerView: 1,
   spaceBetween: -50,
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-  effect: 'fade',
+  effect: "fade",
   fadeEffect: {
     crossFade: true,
   },
